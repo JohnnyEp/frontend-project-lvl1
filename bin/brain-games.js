@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-console.log('Добро пожаловать на Мозговой Штурм!');
+import greeting from '../src/cli.js';
+
+greeting();

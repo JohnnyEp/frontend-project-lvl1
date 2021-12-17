@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "type": "module",
   "description": "The Brain Games",
   "main": "brain-games.js",
@@ -18,9 +18,10 @@
   },
   "homepage": "https://github.com/JohnnyEp/frontend-project-lvl1#readme",
   "dependencies": {
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "readline-sync": "^1.4.10"
   },
-    "bin":{
-      "brain-games": "bin/brain-games.js"
-    }
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  }
 }
