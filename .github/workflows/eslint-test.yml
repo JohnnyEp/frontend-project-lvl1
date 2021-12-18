@@ -1,7 +1,7 @@
 name: eslint-test
 on: push
 jobs:
-  eslint launch:
+  eslint-launch:
     runs-on: ubuntu-latest
     steps:
       - name: run eslint
