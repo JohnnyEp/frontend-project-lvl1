@@ -1,9 +1,9 @@
 import readlineSync from 'readline-sync';
 
-const playGame = (userName) => {
-  const isEven = (num) => (num % 2 === 0);
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+const isEven = (num) => (num % 2 === 0);
 
+const playGame = (userName) => {
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const randomNum = Math.ceil(Math.random() * 200);
     const answer = readlineSync.question(`Question: ${randomNum}\nYour answer: `);
