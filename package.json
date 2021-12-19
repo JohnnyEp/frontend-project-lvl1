@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "description": "The Brain Games",
   "main": "brain-games.js",
@@ -22,7 +22,8 @@
     "readline-sync": "^1.4.10"
   },
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "devDependencies": {
     "eslint": "^8.4.1",
