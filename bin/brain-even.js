@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import playGame from '../src/even_game_logic.js';
-import greeting from '../src/cli.js';
+import evenGame from '../src/games/even-game.js';
 
-const userName = greeting();
-playGame(userName);
+evenGame();
