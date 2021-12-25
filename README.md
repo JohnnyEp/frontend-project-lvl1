@@ -13,5 +13,5 @@
 
 ##
 
-#### Asciinema record:
-https://asciinema.org/a/HrJkeSxZxgH9Vx9RCd5uzP902
+#### Asciinema record (all games):
+https://asciinema.org/a/0u2bzIq0xFE6ksvuGRGFThran
