@@ -22,7 +22,7 @@
 + Node.js version 13 and higher
 
 #### Setup:
-+ make install
++ npm install
 
 #### Games launch:
 + make brain-even		
