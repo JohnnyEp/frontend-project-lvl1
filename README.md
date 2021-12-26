@@ -12,24 +12,26 @@
 
 #### The project contains 5 games to warm up your brain:
 
-+ brain-even (Answer "yes" if the number is even, otherwise answer "no".)
++ brain-even (Is the given number even?)
 + brain-calc (What is the result of the expression?)
 + brain-gcd  (Find the greatest common divisor of given numbers.)
 + brain-progression (What number is missing in the progression?)
-+ brain-prime (Answer "yes" if given number is prime. Otherwise answer "no".)
++ brain-prime (Is the given number prime?)
 
 #### Minimum requirements:
 + Node.js version 13 and higher
-+ readline-sync *("npm install readline-sync" in "frontend-project-lvl1" directory)*
-#### Games launch:
 
+#### Setup:
++ make install
+
+#### Games launch:
 + make brain-even		
 + make brain-calc	
 + make brain-gcd	
 + make brain-progression	
 + make brain-prime
  
-  *all comands in a "frontend-project-lvl1" directory*
+*all comands in a "frontend-project-lvl1" directory*
 
 ##
 
