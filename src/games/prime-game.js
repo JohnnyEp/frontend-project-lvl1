@@ -1,8 +1,9 @@
 import playGame from '../index.js';
+import getRandomNum from '../random-generator.js';
 
 const startQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const getRandomExpression = () => Math.ceil(Math.random() * 100);
+const getRandomNumforGame = () => getRandomNum(1, 100);
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -20,7 +21,7 @@ const isPrime = (num) => {
 const getCorrectAnswer = (expression) => (isPrime(expression) ? 'yes' : 'no');
 
 const primeGame = () => {
-  playGame(startQuestion, getRandomExpression, getCorrectAnswer);
+  playGame(startQuestion, getRandomNumforGame, getCorrectAnswer);
 };
 
 export default primeGame;

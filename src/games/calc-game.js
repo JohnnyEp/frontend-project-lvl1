@@ -1,30 +1,35 @@
 import playGame from '../index.js';
+import getRandomNum from '../random-generator.js';
 
 const startQuestion = 'What is the result of the expression?';
 
-const getRandomExpression = () => {
+let expressionComponents;
+
+const getCalcExpression = () => {
   const operators = ['-', '+', '*'];
-  const randomNum1 = Math.ceil(Math.random() * 10);
-  const randomNum2 = Math.ceil(Math.random() * 10);
-  const randomOperator = operators[Math.floor(Math.random() * 3)];
+  const randomNum1 = getRandomNum(1, 10);
+  const randomNum2 = getRandomNum(1, 10);
+  const randomOperator = operators[getRandomNum(0, 2)];
+  expressionComponents = [randomNum1, randomOperator, randomNum2];
   return `${randomNum1} ${randomOperator} ${randomNum2}`;
 };
 
-const getCorrectAnswer = (expression) => {
-  const components = expression.split(' ');
-  const operator = components[1];
+const getCorrectAnswer = () => {
+  const operator = expressionComponents[1];
   switch (operator) {
     case '-':
-      return String(Number(components[0] - components[2]));
+      return expressionComponents[0] - expressionComponents[2];
     case '+':
-      return String(Number(components[0]) + Number(components[2]));
+      return expressionComponents[0] + expressionComponents[2];
+    case '*':
+      return expressionComponents[0] * expressionComponents[2];
     default:
-      return String(Number(components[0] * components[2]));
+      return (`ERROR! Unknown operator: "${operator}"`);
   }
 };
 
 const calcGame = () => {
-  playGame(startQuestion, getRandomExpression, getCorrectAnswer);
+  playGame(startQuestion, getCalcExpression, getCorrectAnswer);
 };
 
 export default calcGame;
