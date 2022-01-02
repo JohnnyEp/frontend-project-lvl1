@@ -3,27 +3,23 @@ import getRandomNum from '../random-generator.js';
 
 const startQuestion = 'What number is missing in the progression?';
 
-let answerNum;
-
-const getRandomProgressionLine = () => {
+const getProgressionGameData = () => {
   const progLength = getRandomNum(5, 10);
   const incrementStep = getRandomNum(1, 10);
   const startNum = getRandomNum(50, 1);
   const hidePosition = getRandomNum(0, progLength - 1);
-  const prog = [startNum];
-
+  const progLine = [startNum];
   for (let i = 0; i < progLength; i += 1) {
-    prog.push(prog[i] + incrementStep);
+    progLine.push(progLine[i] + incrementStep);
   }
-  answerNum = prog[hidePosition];
-  prog[hidePosition] = '..';
-  return prog.join(' ');
+  const correctAnswer = progLine[hidePosition];
+  progLine[hidePosition] = '..';
+  const progExpression = progLine.join(' ');
+  return [progExpression, correctAnswer];
 };
 
-const getCorrectAnswer = () => answerNum;
-
 const progressionGame = () => {
-  playGame(startQuestion, getRandomProgressionLine, getCorrectAnswer);
+  playGame(startQuestion, getProgressionGameData);
 };
 
 export default progressionGame;

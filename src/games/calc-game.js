@@ -3,33 +3,31 @@ import getRandomNum from '../random-generator.js';
 
 const startQuestion = 'What is the result of the expression?';
 
-let expressionComponents;
+const operators = ['-', '+', '*'];
 
-const getCalcExpression = () => {
-  const operators = ['-', '+', '*'];
+const getCalcGameData = () => {
   const randomNum1 = getRandomNum(1, 10);
   const randomNum2 = getRandomNum(1, 10);
-  const randomOperator = operators[getRandomNum(0, 2)];
-  expressionComponents = [randomNum1, randomOperator, randomNum2];
-  return `${randomNum1} ${randomOperator} ${randomNum2}`;
-};
-
-const getCorrectAnswer = () => {
-  const operator = expressionComponents[1];
-  switch (operator) {
-    case '-':
-      return expressionComponents[0] - expressionComponents[2];
-    case '+':
-      return expressionComponents[0] + expressionComponents[2];
-    case '*':
-      return expressionComponents[0] * expressionComponents[2];
-    default:
-      return (`ERROR! Unknown operator: "${operator}"`);
-  }
+  const randomOperator = operators[getRandomNum(0, operators.length - 1)];
+  const simpleCalculator = (num1, num2, operator) => {
+    switch (operator) {
+      case '-':
+        return num1 - num2;
+      case '+':
+        return num1 + num2;
+      case '*':
+        return num1 * num2;
+      default:
+        return (`ERROR! Unknown operator: "${operator}"`);
+    }
+  };
+  const calcExpression = `${randomNum1} ${randomOperator} ${randomNum2}`;
+  const correctAnswer = simpleCalculator(randomNum1, randomNum2, randomOperator);
+  return [calcExpression, correctAnswer];
 };
 
 const calcGame = () => {
-  playGame(startQuestion, getCalcExpression, getCorrectAnswer);
+  playGame(startQuestion, getCalcGameData);
 };
 
 export default calcGame;
