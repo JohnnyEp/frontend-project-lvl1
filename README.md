@@ -36,4 +36,4 @@
 ##
 
 #### Asciinema record (all games):
-[![asciicast](https://asciinema.org/a/0u2bzIq0xFE6ksvuGRGFThran.svg)](https://asciinema.org/a/0u2bzIq0xFE6ksvuGRGFThran)
+[![asciicast](https://asciinema.org/a/6Usl1mcJQVR3o9qrWSFbxrDai.svg)](https://asciinema.org/a/6Usl1mcJQVR3o9qrWSFbxrDai)
