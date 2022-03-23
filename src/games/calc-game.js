@@ -1,7 +1,7 @@
 import playGame from '../index.js';
 import getRandomNum from '../random-generator.js';
 
-const startQuestion = 'What is the result of the expression?';
+const gameQuestion = 'What is the result of the expression?';
 
 const operators = ['-', '+', '*'];
 
@@ -14,7 +14,7 @@ const simpleCalculator = (num1, operator, num2) => {
     case '*':
       return num1 * num2;
     default:
-      return (`ERROR! Unknown operator: "${operator}"`);
+      throw new Error(`Unknown operator: "${operator}"`);
   }
 };
 
@@ -28,7 +28,7 @@ const getCalcGameData = () => {
 };
 
 const calcGame = () => {
-  playGame(startQuestion, getCalcGameData);
+  playGame(gameQuestion, getCalcGameData);
 };
 
 export default calcGame;
